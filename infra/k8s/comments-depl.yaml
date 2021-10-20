@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-depl
+spec:
+  selector:
+    matchLabels:
+      app: comments
+  template:
+    metadata:
+      labels:
+        app: comments
+    spec:
+      containers:
+      - name: comments
+        image: rochanhm/comments
+        env:      
+          - name: NATS_URL
+            value: 'http://nats-srv:4222'
+          - name: NATS_CLUSTER_ID
+            value: ticketing
+          - name: MONGO_URI
+            value: 'mongodb://comments-mongo-srv:27017/comments'
+          - name: JWT_SIGN
+            valueFrom:
+              secretKeyRef:
+                key: JWT_SIGN
+                name: jwt-secret
+          - name: NATS_CLIENT_ID
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: comments-srv
+spec:
+  selector:
+    app: comments
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+

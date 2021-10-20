@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-depl
+spec:
+  selector:
+    matchLabels:
+      app: posts
+  template:
+    metadata:
+      labels:
+        app: posts
+    spec:
+      containers:
+      - name: posts
+        image: rochanhm/posts
+        env:      
+          - name: NATS_URL
+            value: 'http://nats-srv:4222'
+          - name: NATS_CLUSTER_ID
+            value: ticketing
+          - name: MONGO_URI
+            value: 'mongodb://posts-mongo-srv:27017/posts'
+          - name: JWT_SIGN
+            valueFrom:
+              secretKeyRef:
+                key: JWT_SIGN
+                name: jwt-secret
+          - name: NATS_CLIENT_ID
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: posts-srv
+spec:
+  selector:
+    app: posts
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+

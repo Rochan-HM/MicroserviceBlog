@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-mongo-depl
+spec:
+  selector:
+    matchLabels:
+      app: comments-mongo
+  template:
+    metadata:
+      labels:
+        app: comments-mongo
+    spec:
+      containers:
+      - name: comments-mongo
+        image: mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: comments-mongo-srv
+spec:
+  selector:
+    app: comments-mongo
+  ports:
+  - port: 27017
+    targetPort: 27017
+
+
