@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { getCurrentUser, protectedRoute } from "@rmcommons/ticketapp";
+import { getCurrentUser, protectedRoute } from "@rmcommons/blogapp";
 
 const router = express.Router();
 

@@ -7,7 +7,7 @@ import {
     errorHandler,
     NotFoundError,
     getCurrentUser,
-} from "@rmcommons/ticketapp";
+} from "@rmcommons/blogapp";
 import { newCommentRouter } from "./routes/newComment";
 import { getCommentRouter } from "./routes/getComments";
 import { updateCommentRouter } from "./routes/updateComment";

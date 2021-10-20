@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { protectedRoute, ForbiddenError } from "@rmcommons/ticketapp";
+import { protectedRoute, ForbiddenError } from "@rmcommons/blogapp";
 import { Comment } from "../models/comment";
 import { CommentDeletedPublisher } from "../events/publishers/commentDeletedPublisher";
 import { natsWrapper } from "../natsWrapper";

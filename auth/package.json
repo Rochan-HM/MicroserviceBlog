@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@rmcommons/ticketapp": "^1.0.10",
+    "@rmcommons/blogapp": "^1.0.10",
     "@types/bcryptjs": "^2.4.2",
     "@types/cookie-session": "^2.0.43",
     "@types/cors": "^2.8.12",

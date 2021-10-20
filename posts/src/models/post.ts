@@ -12,7 +12,7 @@ interface PostProps extends mongoose.Document {
     userId: string;
 }
 
-interface TicketModel extends mongoose.Model<PostProps> {
+interface PostModel extends mongoose.Model<PostProps> {
     build(attrs: PostAttributes): PostProps;
 }
 
@@ -44,6 +44,6 @@ const postSchema = new mongoose.Schema(
 
 postSchema.statics.build = (attrs: PostAttributes) => new Post(attrs);
 
-const Post = mongoose.model<PostProps, TicketModel>("Post", postSchema);
+const Post = mongoose.model<PostProps, PostModel>("Post", postSchema);
 
 export { Post };

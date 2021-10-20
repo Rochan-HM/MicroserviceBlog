@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { BadRequestError, NotFoundError } from "@rmcommons/ticketapp";
+import { BadRequestError, NotFoundError } from "@rmcommons/blogapp";
 import { Comment } from "../models/comment";
 
 const router = express.Router();

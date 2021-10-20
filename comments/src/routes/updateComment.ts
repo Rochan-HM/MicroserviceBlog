@@ -5,7 +5,7 @@ import {
     NotFoundError,
     protectedRoute,
     ForbiddenError,
-} from "@rmcommons/ticketapp";
+} from "@rmcommons/blogapp";
 
 import { Comment } from "../models/comment";
 import { CommentUpdatedPublisher } from "../events/publishers/commentUpdatedPublisher";

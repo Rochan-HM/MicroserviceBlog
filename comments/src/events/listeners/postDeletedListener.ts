@@ -1,5 +1,5 @@
 import { Message } from "node-nats-streaming";
-import { Subjects, Listener, PostDeletedEvent } from "@rmcommons/ticketapp";
+import { Subjects, Listener, PostDeletedEvent } from "@rmcommons/blogapp";
 import { Comment } from "../../models/comment";
 import queueGroupName from "./queueGroupName";
 

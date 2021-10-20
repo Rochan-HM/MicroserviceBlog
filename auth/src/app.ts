@@ -4,7 +4,7 @@ import cookieSession from "cookie-session";
 import express from "express";
 import cors from "cors";
 
-import { NotFoundError, errorHandler } from "@rmcommons/ticketapp";
+import { NotFoundError, errorHandler } from "@rmcommons/blogapp";
 import { currentUserRouter } from "./routes/currentuser";
 import { signInRouter } from "./routes/signin";
 import { signOutRouter } from "./routes/signout";

@@ -3,7 +3,7 @@ import {
     protectedRoute,
     NotFoundError,
     ForbiddenError,
-} from "@rmcommons/ticketapp";
+} from "@rmcommons/blogapp";
 import { Post } from "../models/post";
 import { PostDeletedPublisher } from "../events/publishers/postDeletedPublisher";
 import { natsWrapper } from "../natsWrapper";

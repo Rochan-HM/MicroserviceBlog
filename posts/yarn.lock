@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@rmcommons/ticketapp@^1.0.14":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@rmcommons/ticketapp/-/ticketapp-1.0.17.tgz#d236eb31aee7cd37732b00f235c1dd50131cae59"
-  integrity sha512-JTBnL7b55aP2cw6K3dC8nGMKzAjRIj5kWx9cgh1DkZVjmoEfR6nfwepqMwm8ZtuZwCGeNCyq9MF2yHAXArDaKw==
+"@rmcommons/blogapp@^1.0.14":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@rmcommons/blogapp/-/blogapp-1.0.18.tgz#370c3954251916279ae4b61c427653c1014b80da"
+  integrity sha512-1NmjBZE7UkYQgN2W+CmRHmPID7++h6qh77gDMO64RvJfL09HQ5eW8PAL49+xuKFLj0X5GqSUxy0/bUFjCrH8lQ==
   dependencies:
     cookie-session "^1.4.0"
     express "^4.17.1"

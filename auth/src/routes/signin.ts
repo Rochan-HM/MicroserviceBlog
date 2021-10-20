@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
-import { BadRequestError, validateRequest } from "@rmcommons/ticketapp";
+import { BadRequestError, validateRequest } from "@rmcommons/blogapp";
 import { User } from "../models/user";
 
 const router = express.Router();

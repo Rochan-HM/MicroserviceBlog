@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
-import { protectedRoute, validateRequest } from "@rmcommons/ticketapp";
+import { protectedRoute, validateRequest } from "@rmcommons/blogapp";
 import { Post } from "../models/post";
 import { PostCreatedPublisher } from "../events/publishers/postCreatedPublisher";
 import { natsWrapper } from "../natsWrapper";
